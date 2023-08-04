@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [cardHover, setCardHover] = useState(false)
 
   return (
     <>
@@ -48,6 +49,99 @@ function App() {
                 <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div className='mt-10 flex space-x-5'>
+        <div className='w-1/4'>
+          <h1 className='font-bold text-left '>PRICE</h1>
+          <h1 className='text-gray-600 text-left text-sm mt-5'>Range</h1>
+          <div className='flex justify-between space-x-3 mt-3 items-center'>
+            <input type="number" id="default-number" className="block w-full py-4 px-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " required />
+            <h1 className='text-xl font-bold'>-</h1>
+            <input type="number" id="default-number" className="block w-full py-4 px-5 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " required />
+
+          </div>
+
+          <h1 className='font-bold text-left mt-10'>CATEGORIES</h1>
+          <div className='mt-5'>
+
+            <div className="flex items-center mb-4">
+              <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label for="default-checkbox" className="ml-2 text-sm font-medium text-gray-600 ">Alat Make Up</label>
+            </div>
+            <div className="flex items-center mb-4">
+              <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label for="default-checkbox" className="ml-2 text-sm font-medium text-gray-600 ">Figura</label>
+            </div>
+            <div className="flex items-center mb-4">
+              <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label for="default-checkbox" className="ml-2 text-sm font-medium text-gray-600 ">Box Kado</label>
+            </div>
+            <div className="flex items-center mb-4">
+              <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label for="default-checkbox" className="ml-2 text-sm font-medium text-gray-600 ">Alat Tulis</label>
+            </div>
+            <div className="flex items-center mb-4">
+              <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <label for="default-checkbox" className="ml-2 text-sm font-medium text-gray-600 ">Pernak-pernik</label>
+            </div>
+          </div>
+        </div>
+
+        <div className='w-full grid grid-cols-3 gap-5'>
+          <div className='rounded-lg border border-gray-400 w-full relative'>
+            <img className=' rounded-t-lg h-[350px] object-cover' src="kado1.png" alt="" srcset="" />
+            <div className='h-[350px] bg-black bg-opacity-70 absolute flex items-center flex-col justify-center space-y-3 z-10 w-full top-0 rounded-t-lg'>
+              <a className='bg-green-500 text-white py-3 w-[200px] rounded-lg text-sm font-medium' href="/">Tokopedia</a>
+              <a className='bg-orange-500 text-white py-3 w-[200px] rounded-lg text-sm font-medium' href="/">Shopee</a>
+            </div>
+            <div className='p-3 text-left'>
+
+              <h1 className='text-lg font-medium'>Box Kado - Motif Batik</h1>
+              <h2 className='text-2xl font-bold mt-5'>Rp 50000</h2>
+            </div>
+
+          </div>
+
+          <div className='rounded-lg border border-gray-400 w-full'>
+            <img className=' rounded-t-lg h-[350px] object-cover' src="kado1.png" alt="" srcset="" />
+            <div className='p-3 text-left'>
+
+              <h1 className='text-lg font-medium'>Box Kado - Motif Batik</h1>
+              <h2 className='text-2xl font-bold mt-5'>Rp 50000</h2>
+            </div>
+
+          </div>
+          <div className='rounded-lg border border-gray-400 w-full'>
+            <img className=' rounded-t-lg h-[350px] object-cover' src="kado1.png" alt="" srcset="" />
+            <div className='p-3 text-left'>
+
+              <h1 className='text-lg font-medium'>Box Kado - Motif Batik</h1>
+              <h2 className='text-2xl font-bold mt-5'>Rp 50000</h2>
+            </div>
+
+          </div>
+
+          <div className='rounded-lg border border-gray-400 w-full'>
+            <img className=' rounded-t-lg h-[350px] object-cover' src="kado1.png" alt="" srcset="" />
+            <div className='p-3 text-left'>
+
+              <h1 className='text-lg font-medium'>Box Kado - Motif Batik</h1>
+              <h2 className='text-2xl font-bold mt-5'>Rp 50000</h2>
+            </div>
+
+          </div>
+          <div className='rounded-lg border border-gray-400 w-full'>
+            <img className=' rounded-t-lg h-[350px] object-cover' src="kado1.png" alt="" srcset="" />
+            <div className='p-3 text-left'>
+
+              <h1 className='text-lg font-medium'>Box Kado - Motif Batik</h1>
+              <h2 className='text-2xl font-bold mt-5'>Rp 50000</h2>
+            </div>
+
           </div>
         </div>
       </div>
