@@ -6,6 +6,11 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [cardHover, setCardHover] = useState(false)
+  const [shortByOpen, setShortByOpen] = useState(false)
+
+  const handleShortByOpen = () => {
+    setShortByOpen(!shortByOpen)
+  }
 
   return (
     <>
@@ -29,27 +34,26 @@ function App() {
           </div>
         </form>
 
-        <div className='flex items-center space-x-2 w-1/3 justify-end'>
-          <p className='text-sm text-gray-500'> Short by :</p><p className='text-sm font-bold text-gray-800'>New Arrival</p>
-          <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-          </svg>
-          <div id="dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+        <div className='flex items-center space-x-2 w-1/3 justify-end relative'>
+          <div className='flex items-center space-x-1 cursor-pointer' onClick={handleShortByOpen}>
+            <p className='text-sm text-gray-500'> Short by :</p><p className='text-sm font-bold text-gray-800'>New Arrival</p>
+            <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+            </svg>
+          </div>
+          {shortByOpen && <div id="dropdown" className="z-10 absolute top-9 bg-white divide-y divide-gray-100 border-gray-200 border rounded-lg shadow w-44 ">
+            <ul className="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">A-Z</a>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Price</a>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-              </li>
-              <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                <a href="#" className="block px-4 py-2 hover:bg-gray-100 ">Date</a>
               </li>
             </ul>
-          </div>
+          </div>}
         </div>
       </div>
 
@@ -94,10 +98,10 @@ function App() {
         <div className='w-full grid grid-cols-3 gap-5'>
           <div className='rounded-lg border border-gray-400 w-full relative'>
             <img className=' rounded-t-lg h-[350px] object-cover' src="kado1.png" alt="" srcset="" />
-            <div className='h-[350px] bg-black bg-opacity-70 absolute flex items-center flex-col justify-center space-y-3 z-10 w-full top-0 rounded-t-lg'>
+            {/* <div className='h-[350px] bg-black bg-opacity-70 absolute flex items-center flex-col justify-center space-y-3 z-10 w-full top-0 rounded-t-lg'>
               <a className='bg-green-500 text-white py-3 w-[200px] rounded-lg text-sm font-medium' href="/">Tokopedia</a>
               <a className='bg-orange-500 text-white py-3 w-[200px] rounded-lg text-sm font-medium' href="/">Shopee</a>
-            </div>
+            </div> */}
             <div className='p-3 text-left'>
 
               <h1 className='text-lg font-medium'>Box Kado - Motif Batik</h1>
